@@ -1,0 +1,21 @@
+class Point2D
+!!!134914.cpp!!!	Point2D()
+
+        setX(0);
+        setY(0);
+!!!135042.cpp!!!	Point2D(in x : double, in y : double)
+
+        //setX(x); bu sekilde set etmedim cunku yukaridaki kullanimi kullandim. x degerini set ettim
+        //setY(y); y degerini de ayni sekilde yukarida set ettim
+!!!135170.cpp!!!	setX(in inputx : double) : void
+
+        X = inputx;
+!!!135298.cpp!!!	setY(in inputy : double) : void
+
+        Y = inputy;
+!!!135426.cpp!!!	getX() : double
+
+        return X;
+!!!135554.cpp!!!	getY() : double
+
+        return Y;

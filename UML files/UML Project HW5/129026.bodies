@@ -1,0 +1,26 @@
+class PolygonDyn
+!!!137474.cpp!!!	PolygonDyn()
+
+
+
+!!!137602.cpp!!!	PolygonDyn(in PolDynObject : PolygonDyn)
+
+    coordinates = new Point2D[getNumberOfPoint()];
+    for(int i=0; i< getNumberOfPoint(); i++)
+    {
+        coordinates[i]=PolDynObject.coordinates[i];
+    }
+!!!137730.cpp!!!	~PolygonDyn()
+
+    delete [] coordinates;
+
+!!!137858.cpp!!!	operator =(in r : PolygonDyn) : PolygonDyn
+
+
+    if(coordinates!= r.coordinates){
+        delete [] coordinates;
+        //coordinates = new Point2D[r.coordinates];
+    }
+!!!137986.cpp!!!	virtualFonksiyon() : int
+
+    return 0;

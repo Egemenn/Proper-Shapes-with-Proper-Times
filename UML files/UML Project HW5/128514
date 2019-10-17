@@ -1,0 +1,36 @@
+format 221
+"CMakeFiles" // 161044101_CSE241_HW5::cmake-build-debug::CMakeFiles
+  revision 1
+  modified_by 2 "egeme"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "C:/Users/egeme/Desktop/161044101_CSE241_HW5/cmake-build-debug/CMakeFiles/"
+  cpp_src_dir "C:/Users/egeme/Desktop/161044101_CSE241_HW5/cmake-build-debug/CMakeFiles/"
+  package_ref 128642 // 3.10.3
+end

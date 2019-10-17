@@ -1,0 +1,19 @@
+<svg  version="1.1" xmlns="http://www.w3.org/2000/svg">
+<rect x="0"  y="0" width="300"  height="300" stroke="black" fill="red" stroke-width="0.1" />
+<polygon points="0,0 300,0 300,300 0,300 " stroke="black" fill="red" stroke-width="0.1" />
+<polygon points="50,213.397 0,300 100,300 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="150,213.397 100,300 200,300 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="250,213.397 200,300 300,300 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="50,126.795 0,213.397 100,213.397 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="150,126.795 100,213.397 200,213.397 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="250,126.795 200,213.397 300,213.397 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="50,40.1924 0,126.795 100,126.795 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="150,40.1924 100,126.795 200,126.795 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="250,40.1924 200,126.795 300,126.795 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="50,213.397 150,213.397 100,300 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="150,213.397 250,213.397 200,300 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="50,126.795 150,126.795 100,213.397 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="150,126.795 250,126.795 200,213.397 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="50,40.1924 150,40.1924 100,126.795 " stroke="black" fill="green" stroke-width="0.1" />
+<polygon points="150,40.1924 250,40.1924 200,126.795 " stroke="black" fill="green" stroke-width="0.1" />
+</svg>

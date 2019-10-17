@@ -1,0 +1,183 @@
+class Triangle
+!!!142594.cpp!!!	Triangle()
+//T0irangle constuctor
+    cout << "Please enter the edge of triangle" << endl;
+    cin >> edge;
+    CurrentArea=CurrentArea+CalculateAreaOfTri();
+    CurrentPerimeter=CurrentPerimeter+CalculateAreaOfTri();
+!!!142722.cpp!!!	Triangle(in edge : double)
+
+    setEdge(edge);
+    CurrentArea=CurrentArea+CalculateAreaOfTri();
+    CurrentPerimeter=CurrentPerimeter+CalculateAreaOfTri();
+!!!142850.cpp!!!	getEdge() : double
+
+    return edge;
+!!!142978.cpp!!!	setEdge(in E : double) : void
+
+    edge=E;
+!!!143106.cpp!!!	CalculateAreaOfTri() : double
+
+    return (edge * edge) * sqrt(3) / 4;//eskenar ucgenin alani a kare kok 3 bolu 2
+!!!143234.cpp!!!	getx1() : double
+
+    return x1;
+!!!143362.cpp!!!	getx2() : double
+
+    return x2;
+!!!143490.cpp!!!	getx3() : double
+
+    return x3;
+!!!143618.cpp!!!	gety1() : double
+
+    return y1;
+!!!143746.cpp!!!	gety2() : double
+
+    return y2;
+!!!143874.cpp!!!	gety3() : double
+
+    return y3;
+!!!144002.cpp!!!	getColor() : string
+
+    return color;
+!!!144130.cpp!!!	setX1_Y1(in X1 : double, in Y1 : double) : void
+
+    x1=X1;
+    y1=Y1;
+!!!144258.cpp!!!	setX2_Y2(in X2 : double, in Y2 : double) : void
+
+    x2=X2;
+    y2=Y2;
+!!!144386.cpp!!!	setX3_Y3(in X3 : double, in Y3 : double) : void
+
+    x3=X3;
+    y3=Y3;
+!!!144514.cpp!!!	setColor(in Col : string) : void
+
+    color=Col;
+!!!144642.cpp!!!	getArea() : double
+
+    return CurrentArea;
+!!!144770.cpp!!!	getPerimeter() : double
+
+    return CurrentPerimeter;
+!!!144898.cpp!!!	operator <<(inout os : ostream, in T : Triangle) : ofstream
+
+
+    os << "<polygon points=\"" << T.getx1() << "," << T.gety1() << "," << T.getx2() << "," << T.gety2()
+       << "," << T.getx3() << "," << T.gety3() << "\" fill=\""<<T.getColor()<<"\"/>" << endl;
+
+    return dynamic_cast<ofstream &>(os);
+!!!145026.cpp!!!	operator ++(in  : int) : Shape
+
+
+    Triangle T(edge);
+    T.x1=x1;
+    T.y1=y1;
+    T.x2=x2;
+    T.y2=y2;
+    T.x3=x3;
+    T.y3=y3;
+    T.color=color;
+
+    x1++;
+    y1++;
+    x2++;
+    y2++;
+    x3++;
+    y3++;
+
+    return T;
+!!!145154.cpp!!!	operator ++() : Shape
+
+    x1++;
+    y1++;
+    x2++;
+    y2++;
+    x3++;
+    y3++;
+
+    Triangle T(edge);
+    T.x1=x1;
+    T.y1=y1;
+    T.x2=x2;
+    T.y2=y2;
+    T.x3=x3;
+    T.y3=y3;
+    T.color=color;
+
+    return T;
+!!!145282.cpp!!!	operator --(in  : int) : Shape
+
+    Triangle T(edge);
+    T.x1=x1;
+    T.y1=y1;
+    T.x2=x2;
+    T.y2=y2;
+    T.x3=x3;
+    T.y3=y3;
+    T.color=color;
+
+    x1--;
+    y1--;
+    x2--;
+    y2--;
+    x3--;
+    y3--;
+
+    return T;
+!!!145410.cpp!!!	operator --() : Shape
+
+    x1--;
+    y1--;
+    x2--;
+    y2--;
+    x3--;
+    y3--;
+
+    Triangle T(edge);
+    T.x1=x1;
+    T.y1=y1;
+    T.x2=x2;
+    T.y2=y2;
+    T.x3=x3;
+    T.y3=y3;
+    T.color=color;
+
+    return T;
+!!!145538.cpp!!!	operator +(in d : double) : Triangle
+
+    Triangle tNew(edge+d);
+    return tNew;
+!!!145666.cpp!!!	operator -(in d : double) : Triangle
+
+    Triangle tNew(edge-d);
+    return tNew;
+!!!145794.cpp!!!	operator ==(inout t1 : Triangle, inout t2 : Triangle) : bool
+
+    bool equal=false;
+    if(t1.CalculateAreaOfTri()<t2.CalculateAreaOfTri())
+        equal=true;
+
+    return equal;
+!!!145922.cpp!!!	operator !=(in t1 : Triangle, in t2 : Triangle) : bool
+
+    bool notequal=false;
+    if(t1.CalculateAreaOfTri()<t2.CalculateAreaOfTri())
+        notequal=true;
+
+    return notequal;
+!!!146050.cpp!!!	operator >(inout t1 : Triangle, inout t2 : Triangle) : bool
+
+    bool bigger=false;
+    if(t1.CalculateAreaOfTri()<t2.CalculateAreaOfTri())
+        bigger=true;
+
+    return bigger;
+!!!146178.cpp!!!	operator <(in t1 : Triangle, in t2 : Triangle) : bool
+
+    bool smaller=false;
+    if(t1.CalculateAreaOfTri()<t2.CalculateAreaOfTri())
+        smaller=true;
+
+    return smaller;

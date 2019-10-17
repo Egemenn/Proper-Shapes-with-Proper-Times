@@ -1,0 +1,123 @@
+class Rectangle
+!!!138370.cpp!!!	Rectangle()
+
+    //sizeof(x)!= sizeof(int)
+    cout << "Please enter the width:" << endl;//genişlik ve yükseklik girilmesini istiyorum
+    cin >> width;
+    cout << "Please enter the height:" << endl;
+    cin >> height;
+    CurrentArea=CurrentArea+CalculateAreaOfRect();
+    CurrentPerimeter=CurrentPerimeter+CalculateAreaOfRect();
+!!!138498.cpp!!!	Rectangle(in X : double, in Y : double)
+
+    setWidth(X);
+    setHeight(Y);
+    CurrentArea=CurrentArea+CalculateAreaOfRect();
+    CurrentPerimeter=CurrentPerimeter+CalculateAreaOfRect();
+!!!138626.cpp!!!	getHeight() : double
+
+    return height;
+!!!138754.cpp!!!	getWidth() : double
+
+    return width;
+!!!138882.cpp!!!	setHeight(in H : double) : void
+
+    height=H;
+!!!139010.cpp!!!	setWidth(in W : double) : void
+
+    width=W;
+!!!139138.cpp!!!	getX() : double
+
+    return x;
+!!!139266.cpp!!!	getY() : double
+
+    return y;
+!!!139394.cpp!!!	getColor() : string
+
+    return color;
+!!!139522.cpp!!!	setX(in X : double) : void
+
+    x=X;
+!!!139650.cpp!!!	setY(in Y : double) : void
+
+    y=Y;
+!!!139778.cpp!!!	setColor(in Col : string) : void
+
+    color=Col;
+!!!139906.cpp!!!	getArea() : double
+
+    return CurrentArea;
+!!!140034.cpp!!!	getPerimeter() : double
+
+    return CurrentPerimeter;
+!!!140162.cpp!!!	operator ++(in  : int) : Shape
+
+
+    Rectangle C(width, height);
+    C.x=x;
+    C.y=y;
+    C.color=color;
+
+    x++;
+    y++;
+
+    return C;
+
+    /*double cX=c.getX();
+    double cY=c.getY();
+    c.x=cX;
+    c.y=cY;
+    cX++;
+    cY++;
+    return c;*/
+!!!140290.cpp!!!	operator ++() : Shape
+
+
+    x++;
+    y++;
+
+    Rectangle C(width, height);
+    C.x=x;
+    C.y=y;
+    C.color=color;
+
+    return C;
+!!!140418.cpp!!!	operator --(in  : int) : Shape
+
+    Rectangle R(width, height);
+    R.x=x;
+    R.y=y;
+    R.color=color;
+
+    x++;
+    y++;
+
+    return R;
+!!!140546.cpp!!!	operator --() : Shape
+
+    x--;
+    y--;
+
+    Rectangle C(width, height);
+    C.x=x;
+    C.y=y;
+    C.color=color;
+
+    return C;
+!!!140674.cpp!!!	operator +(in d : double) : Rectangle
+
+    Rectangle rNew(width+d, height+d);
+    return rNew;
+!!!140802.cpp!!!	operator -(in d : double) : Rectangle
+
+    Rectangle rNew(width-d, height-d);
+    return rNew;
+!!!140930.cpp!!!	operator <<(inout os : ostream, in R : Rectangle) : ofstream
+
+//Private olan degerleri cagirmak icin getX ve getY kullanmadim, cunku fonksiyonu friend olarak tanimladim. private degere ulasabiliyor.
+    os<< "<rect x=\"" << R.x << "\"  y=\"" << R.y << "\" width=\"" <<R.getWidth() << "\"  height=\"" << R.getHeight()  << "\" stroke=\"black\""
+         " fill=\""<<R.getColor()<<"\" stroke-width=\"" << 0.1 << "\" />" << endl;
+return dynamic_cast<ofstream &>(os);
+!!!141058.cpp!!!	CalculateAreaOfRect() : double
+
+    return (width*width);

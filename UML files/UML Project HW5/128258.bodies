@@ -1,0 +1,16 @@
+class Shape
+!!!141954.cpp!!!	operator ==(inout S1 : Shape, inout S2 : Shape) : bool
+
+    return (S1.getArea() == S2.getArea() && S1.getArea() == S2.getArea());
+!!!142082.cpp!!!	operator !=(inout S1 : Shape, inout S2 : Shape) : bool
+
+    return !(S1.getArea() == S2.getArea() && S1.getArea() == S2.getArea());
+!!!142210.cpp!!!	operator >(inout S1 : Shape, inout S2 : Shape) : bool
+
+    return (S1.getArea()>S2.getArea());
+!!!142338.cpp!!!	operator <(inout S1 : Shape, inout S2 : Shape) : bool
+
+    return (S1.getArea()<S2.getArea());
+!!!142466.cpp!!!	operator <<(inout os : ostream) : ofstream
+
+//    return <#initializer#>;

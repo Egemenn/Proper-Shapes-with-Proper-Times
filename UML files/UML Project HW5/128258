@@ -1,0 +1,536 @@
+format 221
+"Shapes" // 161044101_CSE241_HW5::Shapes
+  revision 1
+  modified_by 2 "egeme"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "C:\\Users\\egeme\\Desktop\\161044101_CSE241_HW5/"
+  cpp_src_dir "C:\\Users\\egeme\\Desktop\\161044101_CSE241_HW5/"
+  cpp_namespace "Shapes"
+  classview 128258 "161044101_CSE241_HW5"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 128770 "Polygon"
+      abstract visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128514 // <generalisation>
+	relation 128514 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128514 // <generalisation>
+	  b parent class_ref 128258 // Shape
+      end
+
+      class 128898 "Point2D"
+	visibility package 
+	cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+	java_decl ""
+	php_decl ""
+	python_2_2 python_decl ""
+	idl_decl ""
+	explicit_switch_type ""
+	mysql_decl ""
+	
+	operation 134914 "Point2D"
+	  preserve_cpp_body_indent public explicit_return_type ""
+	  nparams 0
+	  cpp_decl "    ${comment}${inline}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	  cpp_def "${comment}${inline}${class}::${name}${(}${)}${volatile}${throw} {
+  ${body}}
+"
+	  
+	  
+	  
+	  
+	end
+
+	operation 135042 "Point2D"
+	  preserve_cpp_body_indent public explicit_return_type ""
+	  nparams 2
+	    param in name "x" explicit_type "double"
+	    param in name "y" explicit_type "double"
+	  cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${volatile}${throw}${abstract};
+"
+	  cpp_def "//-------Point2D constructor-------
+
+${inline}${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}${)} : X(x), Y(y) ${throw}{
+  ${body}}
+"
+	  
+	  
+	  
+	  
+	end
+
+	operation 135170 "setX"
+	  preserve_cpp_body_indent public explicit_return_type "void"
+	  nparams 1
+	    param in name "inputx" explicit_type "double"
+	  cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	  cpp_def "//-------Getter Setter-------
+
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	  
+	end
+
+	operation 135298 "setY"
+	  preserve_cpp_body_indent public explicit_return_type "void"
+	  nparams 1
+	    param in name "inputy" explicit_type "double"
+	  cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	  cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	  
+	  comment "X ve Y koordinatlarini atayan setter'lar"
+	end
+
+	operation 135426 "getX"
+	  preserve_cpp_body_indent const public explicit_return_type "double"
+	  nparams 0
+	  cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	  cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	  
+	end
+
+	operation 135554 "getY"
+	  preserve_cpp_body_indent const public explicit_return_type "double"
+	  nparams 0
+	  cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	  cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	  
+	  comment "X ve Y koordinatlarini cagiran getter'lar"
+	end
+
+	attribute 130690 "X"
+	  private explicit_type "double"
+	  cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 130818 "Y"
+	  private explicit_type "double"
+	  cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	  java_decl ""
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+      end
+
+      operation 135682 "Polygon"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 135810 "getArea"
+	preserve_cpp_body_indent cpp_override public explicit_return_type "double"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "Polygon(vector<Point2D> vecP2D);//Point2D vector alan constructor
+~Polygon();"
+      end
+
+      operation 135938 "getPerimeter"
+	preserve_cpp_body_indent cpp_override public explicit_return_type "double"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136066 "operator ++"
+	preserve_cpp_body_indent cpp_override public return_type class_ref 128258 // Shape
+	nparams 1
+	  param in name "" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} & ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136194 "operator ++"
+	preserve_cpp_body_indent cpp_override public return_type class_ref 128258 // Shape
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} & ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136322 "operator --"
+	preserve_cpp_body_indent cpp_override public return_type class_ref 128258 // Shape
+	nparams 1
+	  param in name "" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} & ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136450 "operator --"
+	preserve_cpp_body_indent cpp_override public return_type class_ref 128258 // Shape
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} & ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136578 "Polygon"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "Rect" type class_ref 128514 // Rectangle
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//-------Polygon destructor------
+//    Polygon::~Polygon(){}
+//-------Point2D vektor alan constructor-------
+//Polygon::Polygon(vector<Point2D> vecP2D) {//Point2D vector alan constructor definition'ı
+//delete[]coordinates;//dynamic memory'nin icini bosalttim, yeniden kullanmak icin
+//numberOfPoint = static_cast<int>(vecP2D.size());//vektorun size'ını numberOfPoint'e atadim
+//coordinates = new Point2D[numberOfPoint];
+//for (int i = 0; i < numberOfPoint; i++) {
+//coordinates[i] = vecP2D.at(static_cast<unsigned long long int>(i));//vektordeki her elemani sirasiyla koordinatlara atadim
+//}
+//
+//}
+//-------Rectangle alan Polygon constructor-------
+
+${inline}${class}::${name}${(}${t0} ${p0}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 136706 "Polygon"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "Tri" type class_ref 128642 // Triangle
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//-------Triangle alan Polygon constructor-------
+
+${inline}${class}::${name}${(}${t0} ${p0}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "Rectangle constructor"
+      end
+
+      operation 136834 "Polygon"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "Circ" type class_ref 128130 // Circle
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "//-------Circle alan Polygon constructor-------
+
+${inline}${class}::${name}${(}${t0} ${p0}${)}${throw}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "Triangle constructor"
+      end
+
+      operation 136962 "Polygon"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "conversion" explicit_type "int"
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${class}::${name}${(}${)}${volatile}${throw} {
+  ${body}}
+"
+	
+	
+	
+	
+	comment "Circle constructor"
+      end
+
+      operation 137090 "operator []"
+	preserve_cpp_body_indent public return_type class_ref 128898 // Point2D
+	nparams 1
+	  param in name "order" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} & ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//-------OPERATOR OVERLOADINGLER-------
+//-------operator[] overloading-------
+
+${inline}${type} & ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "coversion constructor"
+      end
+
+      classrelation 128642 // coordinates (<unidirectional association>)
+	relation 128642 --->
+	  a role_name "coordinates" init_value "=  new Point2D[0]" public
+	    comment "friend bool operator==(Polygon P1, Polygon P2);
+friend ostream &operator<<(ostream &os, Polygon P);
+"
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${h_value};
+"
+	    classrelation_ref 128642 // coordinates (<unidirectional association>)
+	  b parent class_ref 128898 // Point2D
+      end
+
+      attribute 130946 "color"
+	public explicit_type "string"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 137218 "getNumberOfPoint"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "//-------operator== overloading-------
+//  bool operator==(Polygon P1, Polygon P2) {
+//if (P1.getNumberOfPoint() == P2.getNumberOfPoint()) {
+//for (int k = 0; k < P1.getNumberOfPoint(); k++) {
+//if ((P1.coordinates[k].getX() != P2.coordinates[k].getX()) &&
+//(P1.coordinates[k].getY() !=
+//P2.coordinates[k].getY()))//bi tanesinin bile koordinatlari esit degilse
+//return false;              //direkt false dondur
+//}
+//} else return P1.getNumberOfPoint() == P2.getNumberOfPoint();
+//}
+//-------operator+ overloading-------
+//   Polygon operator+(Polygon P1, Polygon P2) {
+//
+//Polygon Pnew;//yeni polygon nesnesi tanimladim, return etmek icin
+//Pnew.coordinates = new Polygon::Point2D[P1.getNumberOfPoint() + P1.getNumberOfPoint()];
+////noktalarin sayisini toplayarak olusaka yeni nesnenin nokta sayisini buldum
+//for (int i = 0; i < P1.getNumberOfPoint(); i++) {
+//Pnew.coordinates[i] = P1.coordinates[i];
+//}
+//for (int i = 0; i < P2.getNumberOfPoint(); i++) {//ilk seklin koordinatlarini yeni nesneye esitledikten sonra 2.seklinkini de ekliyorum
+//Pnew.coordinates[i + P1.getNumberOfPoint()] = P2.coordinates[i];
+//}
+//
+//}
+//-------operator<< overloading-------
+//ostream &operator<<(ostream &os, Polygon P) {//Polygon class'i icin << operator overloading'i
+//
+//os << \"<polygon points=\\\"\";
+//for (int k = 0; k < P.numberOfPoint; k++) {
+//os << P.coordinates[k].getX() << \",\" << P.coordinates[k].getY() << \" \";
+//}
+//os << \"\\\" stroke=\\\"black\\\"\" \" fill=\\\"\" << P.color << \"\\\" stroke-width=\\\"\" << 0.1 << \"\\\" />\" << endl;
+//return os;
+//}
+
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 137346 "virtualFonksiyon"
+	abstract cpp_virtual public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      attribute 131074 "numberOfPoint"
+	private explicit_type "int"
+	init_value "=  0"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${h_value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "private tanimladim. <<overloading friend oldugu icin buna ulasabilecek"
+      end
+    end
+  end
+
+  deploymentview 128258 "Shapes"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128386 "Polygon"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128770 // Polygon
+      end
+    end
+  end
+end

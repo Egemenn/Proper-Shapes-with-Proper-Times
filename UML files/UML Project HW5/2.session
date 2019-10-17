@@ -1,0 +1,14 @@
+window_sizes 1920 1001 450 1464 819 128
+
+diagrams
+  active  classdiagram_ref 128130 // diagram UML
+    1464 815 69 B 0 0
+end
+show_stereotypes
+selected class_ref 129154 // PolygonVect
+open
+  class_ref 129154 // PolygonVect
+  deploymentview_ref 128130 // 161044101_CSE241_HW5
+  classview_ref 128258 // 161044101_CSE241_HW5
+end
+end

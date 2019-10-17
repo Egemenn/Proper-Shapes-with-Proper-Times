@@ -1,0 +1,109 @@
+class Polygon
+!!!135810.cpp!!!	getArea() : double
+
+        return 0;
+!!!135938.cpp!!!	getPerimeter() : double
+
+        return 0;
+!!!136066.cpp!!!	operator ++(in  : int) : Shape
+
+        //return <#initializer#>;
+!!!136194.cpp!!!	operator ++() : Shape
+
+        //  return <#initializer#>;
+!!!136322.cpp!!!	operator --(in  : int) : Shape
+
+        // return <#initializer#>;
+!!!136450.cpp!!!	operator --() : Shape
+
+//    return <#initializer#>;
+!!!136578.cpp!!!	Polygon(in Rect : Rectangle)
+
+
+        if (Rect.getWidth() <= 0 || Rect.getWidth() <= 0) {
+            /*0'dan kucuk veya 0'a esit sayi verildiginde hata ver ve programi kapat.*/
+            cerr << "Error! Given width or height is negative number" << endl;
+            exit(1);
+        }
+        decltype(Rect.getX()) x1, y1, x2, y2, x3, y3, x4, y4;//dort kenarli oldugu icin dorder adet x ve y noktalari tanımladim
+        double X = Rect.getX();     //guncel nesnenin x koordinatini aldim
+        double Y = Rect.getY();     //guncel nesnenin y koordinatini aldim
+        numberOfPoint = 4;          //dort kenar inin numberOfPoint'i 4'e esitledim.
+        x1 = X, y1 = Y;             //sol ustteki nokta
+        x2 = X + Rect.getWidth();
+        y2 = Y;                     //sag ustteki nokta
+        x3 = X + Rect.getWidth();
+        y3 = Y + Rect.getHeight();  //sag alttaki nokta
+        x4 = X;
+        y4 = Y + Rect.getHeight();  //sol alttaki nokta
+
+        /*cout << x1 << " " << x2 << " " << x3 << " " << x4 << endl;
+        cout << y1 << " " << y2 << " " << y3 << " " << y4 << endl << endl;*/
+        coordinates = new Point2D[4];//dynamic Point2D arrayi tanimladim
+        coordinates[0] = Point2D(x1, y1);
+        coordinates[1] = Point2D(x2, y2);
+        coordinates[2] = Point2D(x3, y3);
+        coordinates[3] = Point2D(x4, y4);
+        color = Rect.getColor();
+
+!!!136706.cpp!!!	Polygon(in Tri : Triangle)
+
+
+        if (Tri.getEdge() <= 0) {
+            /*0'dan kucuk veya 0'a esit sayi verildiginde hata ver ve programi kapat.*/
+            cerr << "Error! Given edge is negative number or zero (0) " << endl;
+            exit(1);
+
+        }
+        double x1 = Tri.getx1();    //triangle noktalarini burada getter ile cagirdim
+        double y1 = Tri.gety1();
+        double x2 = Tri.getx2();
+        double y2 = Tri.gety2();
+        double x3 = Tri.getx3();
+        double y3 = Tri.gety3();
+        numberOfPoint = 3;          //her nesnenin 3 adet noktasi olacak, ucgen oldugu icin
+        coordinates = new Point2D[3];
+        coordinates[0] = Point2D(x1, y1);
+        coordinates[1] = Point2D(x2, y2);
+        coordinates[2] = Point2D(x3, y3);
+        color = Tri.getColor();
+!!!136834.cpp!!!	Polygon(in Circ : Circle)
+
+
+        double x1, y1;
+        x1 = Circ.getX();//guncel circle'in x koordinatini x1'e atadim
+        y1 = Circ.getY();//guncel circle'in y koordinatini y1'e atadim
+        double r = Circ.getRadius();
+        double a =
+                r / 25;//dairenin kenarlarini 360 nokta olarak dusundugumuzde her 90'lik dilimi kendi icinde cizdirdim
+        numberOfPoint = 100;//point sayisi 360
+        coordinates = new Point2D[100];//360 parcaya bolersem daha duzgun bir  goruntu olusuyor fakat odevde 100 istendigi icin 100 noktaya boldum
+        for (int i = 0; i < 25; i++) {
+            double k = pow(r, 2) - pow((r - a * i),
+                                       2);//pisagor bagintisini kullanarak radiusun karesinden her parcanin karesini cıkarıp karekokunu aldım
+            double x = sqrt(k);
+
+            cout << a << " " << x << endl;
+            /*koordinatlari sol bastan, saat 9 yonunden baslayip saat yonunde cizerek
+             * once 12, sonra 3, sonra 6, sonra da tekrar saat 9 yonune getirerek
+             * cizdirdim. Bu islemi circle'in kenarlarini 4 parcaya bolerek yaptim*/
+            coordinates[i] = Point2D(x1 - r + i * a, y1 - r + r - x);           //ilk dilim
+            coordinates[i + 25] = Point2D(x1 - r + r + x, y1 - r + i * a);      //ikinci dilim
+            coordinates[i + 50] = Point2D(x1 - r + 2 * r - i * a, y1 - r + r + x);//ucuncu dilim
+            coordinates[i + 75] = Point2D(x1 - r + r - x, y1 - r + 2 * r - i * a);//dorduncu dilim
+        }
+        color = Circ.getColor();
+
+!!!136962.cpp!!!	Polygon(in conversion : int)
+
+
+!!!137090.cpp!!!	operator [](in order : int) : Polygon::Point2D
+
+        if (order >= numberOfPoint) {//nokta sayisina esitse veya buyukse olmaz. 0'dan basladigi ve n-1'de bittigi icin
+            cerr << "There is a mistake! Index is bigger than number of count";
+            exit(1);//programi sonlandir
+        }
+        return coordinates[order];//order numberOfPointten buyuk degilse o boyutta koordinati dondur
+!!!137218.cpp!!!	getNumberOfPoint() : int
+
+        return numberOfPoint;

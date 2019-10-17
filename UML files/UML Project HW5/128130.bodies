@@ -1,0 +1,140 @@
+class Circle
+!!!128130.cpp!!!	Circle()
+
+    cout << "Please enter the radius:" << endl;
+    cin >> radius;
+    CurrentArea=CurrentArea+CalculateAreaOfCirc();
+    CurrentPerimeter=CurrentPerimeter+CalculateAreaOfCirc();
+!!!128258.cpp!!!	Circle(in radius : double)
+
+    setRadius(radius);
+    CurrentArea=CurrentArea+CalculateAreaOfCirc();
+    CurrentPerimeter=CurrentPerimeter+CalculateAreaOfCirc();
+
+!!!128386.cpp!!!	getRadius() : double
+
+    return radius;
+!!!128514.cpp!!!	setRadius(in R : double) : void
+
+    radius=R;
+!!!128642.cpp!!!	setX(in X : double) : void
+
+    x=X;
+!!!128770.cpp!!!	setY(in Y : double) : void
+
+    y=Y;
+!!!128898.cpp!!!	setColor(in Col : string) : void
+
+    color= Col;
+!!!129026.cpp!!!	getX() : double
+
+    return x;
+!!!129154.cpp!!!	getY() : double
+
+    return y;
+!!!129282.cpp!!!	getColor() : string
+
+    return color;
+!!!129410.cpp!!!	getArea() : double
+
+    return CurrentArea;
+!!!129538.cpp!!!	getPerimeter() : double
+
+    return CurrentPerimeter;
+!!!129666.cpp!!!	operator ++(in  : int) : Shape
+
+
+    Circle C(radius);
+    C.x=x;
+    C.y=y;
+    C.color=color;
+
+    x++;
+    y++;
+
+    return C;
+!!!129794.cpp!!!	operator ++() : Shape
+
+
+    x++;
+    y++;
+
+    Circle C(radius);
+    C.x=x;
+    C.y=y;
+    C.color=color;
+
+    return C;
+!!!129922.cpp!!!	operator --(in  : int) : Shape
+
+    Circle C(radius);
+    C.x=x;
+    C.y=y;
+    C.color=color;
+
+    x++;
+    y++;
+
+    return C;
+!!!130050.cpp!!!	operator --() : Shape
+
+
+    x--;
+    y--;
+
+    Circle C(radius);
+    C.x=x;
+    C.y=y;
+    C.color=color;
+
+    return C;
+!!!130178.cpp!!!	operator +(in d : double) : Circle
+
+    Circle cNew(radius +d);
+    return cNew;
+!!!130306.cpp!!!	operator -(in d : double) : Circle
+
+    Circle cNew(radius -d);
+    return cNew;
+!!!130434.cpp!!!	operator ==(inout c1 : Circle, inout c2 : Circle) : bool
+
+    bool equal=false;
+    if(c1.CalculateAreaOfCirc()==c2.CalculateAreaOfCirc())
+        equal=true;
+
+    return equal;
+!!!130562.cpp!!!	operator !=(in c1 : Circle, in c2 : Circle) : bool
+
+    bool equal=false;
+    if(c1.CalculateAreaOfCirc()!=c2.CalculateAreaOfCirc())
+        equal=true;
+
+    return equal;
+!!!130690.cpp!!!	operator >(inout c1 : Circle, inout c2 : Circle) : bool
+
+    bool smaller=false;
+    if(c1.CalculateAreaOfCirc()>c2.CalculateAreaOfCirc())
+        smaller=true;
+
+    return smaller;
+!!!130946.cpp!!!	operator <<(inout os : ostream, in C : Circle) : ofstream
+
+
+    os << "<circle cx=\"" << C.getX() << "\"  cy=\"" << C.getY() << "\" r=\"" << C.getRadius() << "\" stroke=\"black\""
+                                                                                                  " fill=\"" << C.getColor() << "\" stroke-width=\"" << 0.1 << "\" />" << endl;
+!!!131074.cpp!!!	FindHeightOfBottom(in bigRadius : double, in smallWidth : double) : double
+
+/*Circle icine Rectangle fonksiyonunda dairenin en altindan oraya sigan tek dortgeni oturtacak kadar
+ *yuksekligi bu fonksiyonda buluyor. daha sonra bottomheight degerini return ediyor */
+
+    double tempBottom = bigRadius*bigRadius - (smallWidth/2)*smallWidth/2;
+    double tempBottom2 = sqrt(tempBottom);
+    double bottomHeight = bigRadius - tempBottom2;//bottomHeight'i hesaplayip return ediyorum ve RinC fonksiyonuna gonderiyorum
+
+    return bottomHeight;
+!!!131202.cpp!!!	CalculateAreaOfCirc() : double
+
+    return (pi*(radius*radius));//dairenin alani pi r kare'yi return ettirdim
+!!!131330.cpp!!!	CalculatePerimeterOfCirc() : double
+
+    return (2*(radius*radius));//dairenin cevresi
